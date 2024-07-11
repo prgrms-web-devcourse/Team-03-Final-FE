@@ -18,6 +18,7 @@ import React from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { foodPartyCreateDrawerOpenState } from 'stores/drawer';
 import { searchRestaurantListState, selectedRestaurantState } from 'stores/restaurant';
+import { DEFAULT_IMAGE } from 'utils/constants/foodParty';
 import ROUTING_PATHS from 'utils/constants/routingPaths';
 import { getCategoryArray } from 'utils/helpers/foodParty';
 
@@ -94,6 +95,8 @@ const SearchRestaurantItem = ({
                 borderRadius={8}
                 objectFit='cover'
                 src={photoUrl}
+                fallbackStrategy={'onError' || 'beforeLoadOrError'}
+                fallbackSrc={DEFAULT_IMAGE}
                 alt='food'
               />
             ))}

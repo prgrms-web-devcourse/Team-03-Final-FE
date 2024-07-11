@@ -3,10 +3,9 @@ import { foodPartyCreateDrawerOpenState } from 'stores/drawer';
 import { kakaoMapOptionsState } from 'stores/kakaoMap';
 import { searchRestaurantListState } from 'stores/restaurant';
 import { AxiosPhotoResponseValue } from 'types/kakaoSearch';
+import { DEFAULT_IMAGE } from 'utils/constants/foodParty';
 import { keywordSearch } from 'utils/helpers/kakaoMap';
 import { getKeywordPhotos } from 'utils/helpers/kakaoSearch';
-
-const DEFAULT_IMAGE = '/images/default-restaurant.svg';
 
 const useSearchRestaurant = () => {
   const kakaoMapOptions = useRecoilValue(kakaoMapOptionsState);

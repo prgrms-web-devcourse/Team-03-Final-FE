@@ -1,3 +1,5 @@
+export const DEFAULT_IMAGE = '/images/default-restaurant.svg';
+
 export const foodPartyCategory = [
   {
     title: '신나는 술자리',
